@@ -7,7 +7,7 @@ const port = 3000;
 
 //TODO: Create a GET /musicians route to return all musicians 
 
-
+app.use(express.json())
 app.get("/musicians", async(req,res)=> {
     try{const musician = await Musician.findAll()
     
